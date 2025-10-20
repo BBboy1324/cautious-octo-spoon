@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+       #main {
+            color:blue;
+            font-size:25px;
+        }
+            #link {
+                font-size: 35px;
+            }
+            #the {
+                font-size: 60px;
+                font-weight: 900;
+            }
+            #background{
+                background-color: lightgray;
+            }
+             body { font-family: sans-serif; margin: 20px; }
+        #message-container { border: 1px solid #ccc; padding: 10px; min-height: 200px; overflow-y: auto; margin-bottom: 10px; }
+        .message { margin-bottom: 5px; padding: 5px; background-color: #f0f0f0; border-radius: 5px; }
+        #message-input { width: calc(100% - 70px); padding: 8px; }
+        #send-button { padding: 8px 12px; }
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="30"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>K.O.T.L.C. home</title>
+    </head>
+    <body style="background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);">
+        <div id="background" style="padding: 20px;">
+            <h1>Keeper of the lost cities group website</h1>
+            <p>This is a website made for fans of the keeper of the lost cities book series by Shannon Messenger</p>
+            <p>To enter the website, please enter the password</p>
+            <button onclick="document.getElementById('password').style.display='block'"></button>
+        </div>
+        <div id="password"></div>
+            <script>
+            function checkPassword()
+                {
+                    var password = document.getElementById("passwordInput").value;
+                    if (password === "kotlc") {
+                        document.getElementById("protectedContent").style.display = "block";
+                        document.getElementById("loginForm").style.display = "none";
+                        document.getElementById("password").style.display = "none"; // Hide the password section
+                    } else {
+                        alert("Incorrect Password!");
+                    }
+                }
+            </script>
+            <div id="loginForm">
+                <label for="passwordInput">Password:</label>
+                <input type="password" id="passwordInput">
+                <button onclick="checkPassword()">Go</button>
+            </div>
+        </div>
+
+        <div id="protectedContent" style="display:none;">
+            <p id="the">Welcome to Kotlc group website</p>
+            <img src="IMG_0445.jpeg">
+            <p id="link"><a href="https://shannonmessenger.com/keeper-of-lost-cities.html"target="-blank">offical website</a></p>
+            <h1>kotlc text thread</h1>
+            <p>(sorry about how old it looks)</p>
+            <div id="message-container"></div>
+            <input type="text" id="message-input" placeholder="Type here...">
+            <button id="send-button">Send</button>
+            <img src="kotlc2.png" alt="kotlc logo">
+
+            <script src="script.js"></script>
+            <p id="main">thank you anyone who actually oppened this page</p>
+            <p id="main">hope you enjoy</p>
+        <button onclick="document.getElementById('spoiler').style.display='block'">only press in absolute emergency,!!!big spoiler!!!</button>
+        <div id="spoiler" style="display:none;">
+        <p>spoiler warning</p>
+        <p>if you want to see the spoiler, enter the password</p>
+        <div id="spoiler2">
+            <label for="passwordInput2">Password:</label>
+            <input type="password" id="passwordInput2">
+            <button onclick="checkPassword2()">Go</button>
+        </div>
+        <div id="protectedspoiler" style="display:none;">
+            <p>big spoiler</p>
+            <button onclick="document.getElementById('spoiler3').style.display='block'">Sophie's real mom</button>
+            <div id="spoiler3" style="display:none;">
+                <p>her real mom is counciler Oralie</p>
+            </div>
+            <button onclick="document.getElementById('spoiler4').style.display='block'">Sophie's real dad</button>
+            <div id="spoiler4" style="display:none;">
+                <p>her real dad is Elwin</p>
+            </div>
+        </div>
+        <button onclick="window.close()">Close Page</button><br>
+        </div>
+        <script>
+        function checkPassword2() {
+            var password = document.getElementById("passwordInput2").value;
+            if (password === "1234") {
+            document.getElementById("protectedspoiler").style.display = "block";
+            document.getElementById("spoiler2").style.display = "none";
+            } else {
+            alert("Incorrect Password!");
+            }
+        }
+        </script>
+                <br><button onclick="window.close()">Close Page</button>
+        </div>
+     </body>
+</html>
